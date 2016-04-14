@@ -189,7 +189,11 @@
         
             <ul>
             
-                <li class="toctree-l3"><a href="#working-on-documentation">Working on documentation</a></li>
+                <li class="toctree-l3"><a href="#mkdocs-and-github-pages">MkDocs and Github pages</a></li>
+                
+                    <li><a class="toctree-l4" href="#mkdocs">MkDocs</a></li>
+                
+                    <li><a class="toctree-l4" href="#github-pages">Github pages</a></li>
                 
             
                 <li class="toctree-l3"><a href="#building-the-documentation">Building the documentation</a></li>
@@ -246,9 +250,12 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="working-on-documentation">Working on documentation<a class="headerlink" href="#working-on-documentation" title="Permanent link">¶</a></h1>
+                <h1 id="mkdocs-and-github-pages">MkDocs and Github pages<a class="headerlink" href="#mkdocs-and-github-pages" title="Permanent link">¶</a></h1>
+<h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">¶</a></h2>
 <p>The documentation is generated with <a href="http://www.mkdocs.org/">MkDocs</a> and it lives in <a href="https://github.com/obestwalter/mau-mau/tree/master/docs/">docs/</a>. The configuration is in <a href="https://github.com/obestwalter/mau-mau/blob/master/mkdocs.yml">mkdocs.yml</a> (<a href="https://en.wikipedia.org/wiki/YAML">YAML</a> format).</p>
 <p><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is an easy to learn format that is the default on <a href="">Github</a>https://guides.github.com/features/mastering-markdown/ and <a href="http://stackoverflow.com/editing-help">Stack Overflow</a>. It is much easier on the eye than restructuredText - the established standard in the Python world. But it is also not as powerful. For more complex documentation <a href="http://www.sphinx-doc.org">Sphinx</a> and <a href="http://www.sphinx-doc.org/en/stable/rest.html">restructuredText</a> might be better suited.</p>
+<h2 id="github-pages">Github pages<a class="headerlink" href="#github-pages" title="Permanent link">¶</a></h2>
+<p>Github offers to host the project documentation on <a href="https://pages.github.com/">Github Pages</a>. MkDocs has an inbuilt deploy functionality do push the documentation there. The pages are hosted as project homepage on <a href="http://obestwalter.github.io/mau-mau/">github.io</a>.</p>
 <h1 id="building-the-documentation">Building the documentation<a class="headerlink" href="#building-the-documentation" title="Permanent link">¶</a></h1>
 <p>When you work on the documentation you can start a local server:</p>
 <pre><code>$ cd &lt;path/to/your/clone&gt;
