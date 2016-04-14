@@ -150,7 +150,7 @@
             
                 <li class="toctree-l3"><a href="#modules-defining-the-classes">Modules defining the classes</a></li>
                 
-                    <li><a class="toctree-l4" href="#subjectspy-and-objectspy">subjects.py and objects.py</a></li>
+                    <li><a class="toctree-l4" href="#objectspy-and-subjectspy">objects.py and subjects.py</a></li>
                 
                     <li><a class="toctree-l4" href="#rulespy">rules.py</a></li>
                 
@@ -285,17 +285,23 @@
 <p>The general concepts used in the game as classes.</p>
 <h1 id="modules-defining-the-classes">Modules defining the classes<a class="headerlink" href="#modules-defining-the-classes" title="Permanent link">¶</a></h1>
 <p>These look pretty different from <code>game.py</code> and they are. Here is where the object oriented part of the story kicks in. If <code>game.py</code> contains the plot, these modules contain the descriptions of the actors and props of the story. They describe the relevant part of the virtual universe that is created to run the simulation. It contains custom data structures (a.k.a. classes) to model the problem of simulating Mau Mau. You should be able to read through the classes and get an idea of what elements are needed to simulate a card game and how they might interact.</p>
-<h2 id="subjectspy-and-objectspy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/subjects.py">subjects.py</a> and <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/objects.py">objects.py</a><a class="headerlink" href="#subjectspy-and-objectspy" title="Permanent link">¶</a></h2>
+<h2 id="objectspy-and-subjectspy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/objects.py">objects.py</a> and <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/subjects.py">subjects.py</a><a class="headerlink" href="#objectspy-and-subjectspy" title="Permanent link">¶</a></h2>
 <p>I know .. in Python everything is an object, so this would be meaningless. This is also not <a href="https://en.wikipedia.org/wiki/Subject-oriented_programming">subject oriented programming</a>. These are just good terms for what those classes describe in the context of the program: there are objects in the game which are manipulated by the subjects.</p>
 <h2 id="rulespy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/rules.py">rules.py</a><a class="headerlink" href="#rulespy" title="Permanent link">¶</a></h2>
 <p>This contains the classes that implement the rules of Mau Mau. Start reading with the <code>MauMau</code> class and see if you can figure out how it works. There is always one concrete rule active on the table that is valid for the currently played round. Sometimes information gets transferred from one rule to the next (e.g. if a 7 was put on a seven, the number of draws have to accumulate). </p>
 <h2 id="strategypy-how-to-play"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/strategy.py">strategy.py</a>: how to play<a class="headerlink" href="#strategypy-how-to-play" title="Permanent link">¶</a></h2>
 <p><strong>Note:</strong> A player has a strategy, but the player also attaches it to the active rule, so that it can be queried for the wanted suit if a Jack is on the table.</p>
 <h3 id="basicstrategy">BasicStrategy<a class="headerlink" href="#basicstrategy" title="Permanent link">¶</a></h3>
-<p>just plays according to the rules and always chooses random antidotes and cards. If playing a Jack it always asks for the suit it has the most of. </p>
+<p>Player plays according to the rules and always chooses random antidotes if they have any (e.g. 7 on 7 to prevent having to draw) or normal cards. If playing a Jack it always asks for the suit it has the most of. </p>
 <p>This can be extended upon to implement "real" strategies.</p>
 <h3 id="humanstrategy">HumanStrategy<a class="headerlink" href="#humanstrategy" title="Permanent link">¶</a></h3>
 <p>Mainly to show that the existing design makes it very easy to even add interactivity to let a human play against a computer (<code>mau-mau human</code>).</p>
+<p>The impact of this is very likely to be zero on a planetary basis, as this is just a teaching tool, but in general one should be very wary of implementing something just because it's easy:</p>
+<blockquote>
+<p>I call it my billion-dollar mistake. It was the invention of the null reference in 1965. At that time, I was designing the first comprehensive type system for references in an object oriented language (ALGOL W). My goal was to ensure that all use of references should be absolutely safe, with checking performed automatically by the compiler. But I couldn't resist the temptation to put in a null reference, simply because it was so easy to implement. This has led to innumerable errors, vulnerabilities, and system crashes, which have probably caused a billion dollars of pain and damage in the last forty years.</p>
+<p>-- Tony Hoare</p>
+</blockquote>
+<p>... you have been warned.</p>
 <h1 id="clipy-command-line-access"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/cli.py">cli.py</a>: command line access<a class="headerlink" href="#clipy-command-line-access" title="Permanent link">¶</a></h1>
 <p>This contains the code for the commandline interface. Its function <code>main</code> is configured in <code>setup.py</code> to act like a program called <code>mau-mau</code> that is accessible where the package is installed. At the moment the following can be accessed from the commandline:</p>
 <h1 id="statspy-create-statistics"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/stats.py">stats.py</a>: create statistics<a class="headerlink" href="#statspy-create-statistics" title="Permanent link">¶</a></h1>
