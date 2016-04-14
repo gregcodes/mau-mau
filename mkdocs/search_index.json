@@ -217,22 +217,17 @@
         },
         {
             "location": "/dev/static-analysis/",
-            "text": "Static code analysis\n\u00b6\n\n\nTODO\n\n\nFlake8\n\u00b6\n\n\nrun the static analysis:\n\n\n$ cd \npath/to/your/clone\n\n$ flake8 mau_mau/ tests/ --show-source\n\n\n\nIf flake8 is happy it won't produce any output. If not, it looks ike this:\n\n\nmau_mau/cli.py:39:80: E501 line too long (84 \n 79 characters)\n####################################################################################\n                                                                               ^\nmau_mau/cli.py:41:1: E302 expected 2 blank lines, found 1\ndef simple_parse_args(argv):\n^\n\n\n\nQuantified Code\n\u00b6\n\n\nQuantified Code offers static code analysis as a webservice that connects to your Github repository. It is an interesting new approach and can teach you a lot about the code you write. Definitely \nworth a look\n.",
-            "title": "Static code analysis"
-        },
-        {
-            "location": "/dev/static-analysis/#static-code-analysis",
-            "text": "TODO",
+            "text": "Flake8\n\u00b6\n\n\nFlake8\n is a collection of tools that analyze the code without running it. This can be understood as a first line of defense and you learn about style and complexity problems you might have in your code.\n\n\nRun flake8 analysis:\n\n\n$ cd \npath/to/your/clone\n\n$ flake8 mau_mau/ tests/ --show-source\n\n\n\nIf flake8 is happy it won't produce any output. If not, it looks ike this:\n\n\nmau_mau/cli.py:39:80: E501 line too long (84 \n 79 characters)\n####################################################################################\n                                                                               ^\nmau_mau/cli.py:41:1: E302 expected 2 blank lines, found 1\ndef simple_parse_args(argv):\n^\n\n\n\nQuantified Code\n\u00b6\n\n\nQuantified Code offers static code analysis as a webservice that connects to your Github repository. It is an interesting new approach and can teach you a lot about the code you write. It is not just pointing out problems it tries to educate about the reasoning behind the warnings and even helps to fix the problems. Definitely \nworth a look\n.",
             "title": "Static code analysis"
         },
         {
             "location": "/dev/static-analysis/#flake8",
-            "text": "run the static analysis:  $ cd  path/to/your/clone \n$ flake8 mau_mau/ tests/ --show-source  If flake8 is happy it won't produce any output. If not, it looks ike this:  mau_mau/cli.py:39:80: E501 line too long (84   79 characters)\n####################################################################################\n                                                                               ^\nmau_mau/cli.py:41:1: E302 expected 2 blank lines, found 1\ndef simple_parse_args(argv):\n^",
+            "text": "Flake8  is a collection of tools that analyze the code without running it. This can be understood as a first line of defense and you learn about style and complexity problems you might have in your code.  Run flake8 analysis:  $ cd  path/to/your/clone \n$ flake8 mau_mau/ tests/ --show-source  If flake8 is happy it won't produce any output. If not, it looks ike this:  mau_mau/cli.py:39:80: E501 line too long (84   79 characters)\n####################################################################################\n                                                                               ^\nmau_mau/cli.py:41:1: E302 expected 2 blank lines, found 1\ndef simple_parse_args(argv):\n^",
             "title": "Flake8"
         },
         {
             "location": "/dev/static-analysis/#quantified-code",
-            "text": "Quantified Code offers static code analysis as a webservice that connects to your Github repository. It is an interesting new approach and can teach you a lot about the code you write. Definitely  worth a look .",
+            "text": "Quantified Code offers static code analysis as a webservice that connects to your Github repository. It is an interesting new approach and can teach you a lot about the code you write. It is not just pointing out problems it tries to educate about the reasoning behind the warnings and even helps to fix the problems. Definitely  worth a look .",
             "title": "Quantified Code"
         },
         {
