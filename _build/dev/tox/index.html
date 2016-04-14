@@ -8,7 +8,7 @@
   
   
   
-  <title>Getting started - Mau Mau</title>
+  <title>Using Tox - Mau Mau</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -29,9 +29,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Getting started";
-    var mkdocs_page_input_path = "dev/getting-started.md";
-    var mkdocs_page_url = "/dev/getting-started/";
+    var mkdocs_page_name = "Using Tox";
+    var mkdocs_page_input_path = "dev/tox.md";
+    var mkdocs_page_url = "/dev/tox/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -149,15 +149,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Getting started</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#get-the-sources">Get the sources</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../getting-started/">Getting started</a>
         
     </li>
 
@@ -177,8 +170,15 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../tox/">Using Tox</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Using Tox</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#tox-a-developer-frontend">Tox - a developer frontend</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -226,7 +226,7 @@
         
       
     
-    <li>Getting started</li>
+    <li>Using Tox</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -240,23 +240,48 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="get-the-sources">Get the sources<a class="headerlink" href="#get-the-sources" title="Permanent link">¶</a></h1>
-<p>To work on the code:</p>
-<ul>
-<li><a href="https://guides.github.com/activities/forking/">fork</a> the code </li>
-<li><a href="http://rogerdudler.github.io/git-guide/">clone</a> the repository to <code>&lt;path/to/your/clone&gt;</code> (wherever that is).</li>
-</ul>
-<p>... and install the code as editable in a <a href="../../guide/installation/#prepare-a-virtualenv">virtualenv</a>:</p>
-<pre><code>$ &lt;activate your virtualenv&gt;
-$ cd &lt;path/to/your/clone&gt;
-$ pip install -e '.[all]'
+                <h1 id="tox-a-developer-frontend">Tox - a developer frontend<a class="headerlink" href="#tox-a-developer-frontend" title="Permanent link">¶</a></h1>
+<p><a href="https://pypi.python.org/pypi/tox">Tox</a> is one abstraction level up from py.test and serves as a command line frontend for different kinds of tests and also acts a a frontend for external test runners as part of <a href="https://en.wikipedia.org/wiki/Continuous_integration">CI</a>. It automatically creates an environment for the tests, installs dependencies, does whatever else is needed for test preparation and outputs the results.</p>
+<p>It can also be (ab)used to act as a frontend for other tasks developers have to do as part of their work. In this project we also use it for building and developing the documentation.</p>
+<p>Run static code analysis:</p>
+<pre><code>$ cd &lt;/path/to/your/clone&gt;
+$ tox -e static
 </code></pre>
-<p>output like:</p>
-<pre><code>Obtaining file:///&lt;/path/to/your/clone&gt;
-Installing collected packages: mau-mau
-  Running setup.py develop for mau-mau
-Successfully installed mau-mau
+<p>output like: </p>
+<pre><code>static create: &lt;/path/to/your/clone&gt;/.tox/static
+static installdeps: flake8
+static develop-inst: &lt;/path/to/your/clone&gt;
+static installed: flake8==2.5.4,-e git+git@github.com:obestwalter/mau-mau.git@46669a6073d233b8a27eee4995c63f03a4aec7a3#egg=mau_mau,mccabe==0.4.0,pep8==1.7.0,pyflakes==1.0.0
+static runtests: PYTHONHASHSEED='3703953266'
+static runtests: commands[0] | flake8 &lt;/path/to/your/clone&gt;/mau_mau &lt;/path/to/your/clone&gt;/tests --show-source
 </code></pre>
+<p>command line usage:</p>
+<pre><code>$ cd &lt;/path/to/your/clone&gt;
+$ tox -e tests
+</code></pre>
+<p>output like: </p>
+<pre><code>tests develop-inst-nodeps: &lt;/path/to/your/clone&gt;
+tests installed: -e git+git@github.com:obestwalter/mau-mau.git@46669a6073d233b8a27eee4995c63f03a4aec7a3#egg=mau_mau,py==1.4.31,pytest==2.9.1
+tests runtests: PYTHONHASHSEED='2804594378'
+tests runtests: commands[0] | py.test &lt;/path/to/your/clone&gt;/tests
+============================= test session starts =============================
+platform linux -- Python 3.4.4, pytest-2.9.1, py-1.4.31, pluggy-0.3.1
+rootdir: &lt;/path/to/your/clone&gt;, inifile: tox.ini
+collected 35 items
+
+tests/test_concepts.py ...................
+tests/test_objects.py .....
+tests/test_player.py ...
+tests/test_rules.py ...
+tests/test_sim.py .....
+
+========================== 35 passed in 0.04 seconds ==========================
+___________________________________ summary ___________________________________
+  tests: commands succeeded
+  congratulations :)
+</code></pre>
+<p>This is a very simple setup. There are many more <a href="https://tox.readthedocs.org/en/latest/config.html">configuration options</a></p>
+<p><strong>BTW:</strong> just running <code>tox</code> without parameters runs all the environments defined in envlist.</p>
               
             </div>
           </div>
@@ -264,10 +289,10 @@ Successfully installed mau-mau
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../static-analysis/" class="btn btn-neutral float-right" title="Static code analysis">Next <span class="icon icon-circle-arrow-right"></span></a>
+        <a href="../travis-ci/" class="btn btn-neutral float-right" title="Continuous intergration">Next <span class="icon icon-circle-arrow-right"></span></a>
       
       
-        <a href="../../implementation/explore/" class="btn btn-neutral" title="Explore the code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../tests/" class="btn btn-neutral" title="Automatic tests"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -295,10 +320,10 @@ Successfully installed mau-mau
           <a href="https://github.com/obestwalter/mau-mau" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../implementation/explore/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../tests/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
       
-        <span style="margin-left: 15px"><a href="../static-analysis/" style="color: #fcfcfc">Next &raquo;</a></span>
+        <span style="margin-left: 15px"><a href="../travis-ci/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>

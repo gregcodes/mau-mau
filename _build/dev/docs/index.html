@@ -8,7 +8,7 @@
   
   
   
-  <title>Getting started - Mau Mau</title>
+  <title>Working on documentation - Mau Mau</title>
   
 
   <link rel="shortcut icon" href="../../img/favicon.ico">
@@ -29,9 +29,9 @@
   
   <script>
     // Current page data
-    var mkdocs_page_name = "Getting started";
-    var mkdocs_page_input_path = "dev/getting-started.md";
-    var mkdocs_page_url = "/dev/getting-started/";
+    var mkdocs_page_name = "Working on documentation";
+    var mkdocs_page_input_path = "dev/docs.md";
+    var mkdocs_page_url = "/dev/docs/";
   </script>
   
   <script src="../../js/jquery-2.1.1.min.js"></script>
@@ -149,15 +149,8 @@
 
         
             
-    <li class="toctree-l1 current">
-        <a class="current" href="./">Getting started</a>
-        
-            <ul>
-            
-                <li class="toctree-l3"><a href="#get-the-sources">Get the sources</a></li>
-                
-            
-            </ul>
+    <li class="toctree-l1 ">
+        <a class="" href="../getting-started/">Getting started</a>
         
     </li>
 
@@ -191,8 +184,25 @@
 
         
             
-    <li class="toctree-l1 ">
-        <a class="" href="../docs/">Working on documentation</a>
+    <li class="toctree-l1 current">
+        <a class="current" href="./">Working on documentation</a>
+        
+            <ul>
+            
+                <li class="toctree-l3"><a href="#mkdocs-and-github-pages">MkDocs and Github pages</a></li>
+                
+                    <li><a class="toctree-l4" href="#mkdocs">MkDocs</a></li>
+                
+                    <li><a class="toctree-l4" href="#github-pages">Github pages</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#building-the-documentation">Building the documentation</a></li>
+                
+            
+                <li class="toctree-l3"><a href="#deploying-the-documentation">Deploying the documentation</a></li>
+                
+            
+            </ul>
         
     </li>
 
@@ -226,7 +236,7 @@
         
       
     
-    <li>Getting started</li>
+    <li>Working on documentation</li>
     <li class="wy-breadcrumbs-aside">
       
         
@@ -240,22 +250,25 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="get-the-sources">Get the sources<a class="headerlink" href="#get-the-sources" title="Permanent link">¶</a></h1>
-<p>To work on the code:</p>
-<ul>
-<li><a href="https://guides.github.com/activities/forking/">fork</a> the code </li>
-<li><a href="http://rogerdudler.github.io/git-guide/">clone</a> the repository to <code>&lt;path/to/your/clone&gt;</code> (wherever that is).</li>
-</ul>
-<p>... and install the code as editable in a <a href="../../guide/installation/#prepare-a-virtualenv">virtualenv</a>:</p>
-<pre><code>$ &lt;activate your virtualenv&gt;
-$ cd &lt;path/to/your/clone&gt;
-$ pip install -e '.[all]'
+                <h1 id="mkdocs-and-github-pages">MkDocs and Github pages<a class="headerlink" href="#mkdocs-and-github-pages" title="Permanent link">¶</a></h1>
+<h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">¶</a></h2>
+<p>The documentation is generated with <a href="http://www.mkdocs.org/">MkDocs</a> and it lives in <a href="https://github.com/obestwalter/mau-mau/tree/master/docs/">docs/</a>. The configuration is in <a href="https://github.com/obestwalter/mau-mau/blob/master/mkdocs.yml">mkdocs.yml</a> (<a href="https://en.wikipedia.org/wiki/YAML">YAML</a> format).</p>
+<p><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is an easy to learn format that is the default on <a href="">Github</a>https://guides.github.com/features/mastering-markdown/ and <a href="http://stackoverflow.com/editing-help">Stack Overflow</a>. It is much easier on the eye than restructuredText - the established standard in the Python world. But it is also not as powerful. For more complex documentation <a href="http://www.sphinx-doc.org">Sphinx</a> and <a href="http://www.sphinx-doc.org/en/stable/rest.html">restructuredText</a> might be better suited.</p>
+<h2 id="github-pages">Github pages<a class="headerlink" href="#github-pages" title="Permanent link">¶</a></h2>
+<p>Github offers to host the project documentation on <a href="https://pages.github.com/">Github Pages</a>. MkDocs has an inbuilt deploy functionality do push the documentation there. The pages are hosted as project homepage on <a href="http://obestwalter.github.io/mau-mau/">github.io</a>.</p>
+<h1 id="building-the-documentation">Building the documentation<a class="headerlink" href="#building-the-documentation" title="Permanent link">¶</a></h1>
+<p>When you work on the documentation you can start a local server:</p>
+<pre><code>$ cd &lt;path/to/your/clone&gt;
+$ tox -e docs-auto
 </code></pre>
-<p>output like:</p>
-<pre><code>Obtaining file:///&lt;/path/to/your/clone&gt;
-Installing collected packages: mau-mau
-  Running setup.py develop for mau-mau
-Successfully installed mau-mau
+<p>The documentation is served on <a href="http://localhost:8000/">localhost:8000</a> and changes are automatically detected and the website is reloaded.</p>
+<p>Tidy up the build in case of big changes or problems:</p>
+<pre><code>$ tox -e docs-clean
+</code></pre>
+<h1 id="deploying-the-documentation">Deploying the documentation<a class="headerlink" href="#deploying-the-documentation" title="Permanent link">¶</a></h1>
+<p>If you have push rights for the repository you can deploy the current documentation with:</p>
+<pre><code>$ cd &lt;path/to/your/clone&gt;
+$ tox -e docs-deploy
 </code></pre>
               
             </div>
@@ -264,10 +277,8 @@ Successfully installed mau-mau
   
     <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
       
-        <a href="../static-analysis/" class="btn btn-neutral float-right" title="Static code analysis">Next <span class="icon icon-circle-arrow-right"></span></a>
       
-      
-        <a href="../../implementation/explore/" class="btn btn-neutral" title="Explore the code"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../travis-ci/" class="btn btn-neutral" title="Continuous intergration"><span class="icon icon-circle-arrow-left"></span> Previous</a>
       
     </div>
   
@@ -295,10 +306,8 @@ Successfully installed mau-mau
           <a href="https://github.com/obestwalter/mau-mau" class="icon icon-github" style="float: left; color: #fcfcfc"> GitHub</a>
       
       
-        <span><a href="../../implementation/explore/" style="color: #fcfcfc;">&laquo; Previous</a></span>
+        <span><a href="../travis-ci/" style="color: #fcfcfc;">&laquo; Previous</a></span>
       
-      
-        <span style="margin-left: 15px"><a href="../static-analysis/" style="color: #fcfcfc">Next &raquo;</a></span>
       
     </span>
 </div>
