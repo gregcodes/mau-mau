@@ -2,18 +2,18 @@
     "docs": [
         {
             "location": "/",
-            "text": "Mau Mau\n\n\n\n\nPlay is the highest form of research\n\n\n-- \nProbably not Albert Einstein\n\n\n\n\nFeatures of this implementation\n\n\n\n\nComplete \nrules of Mau Mau\n\n\ntwo different strategies:\n\n\nsimple random strategy for a computer player\n\n\nstrategy that adds interactivity so a human can play against the computer\n\n\n\n\n\n\nFunctions to run multiple games and collect stats\n\n\nFlexible \ncommand line interface\n (add new functions without adjusting code)\n\n\nautomatic tests\n with py.test, tox and Travis CI\n\n\nLogging with the stdlib \nlogging module\n\n\nUse of \nmagic methods (protocols)\n to create custom classes which behave like inbuilt data types",
+            "text": "Mau Mau\n\n\n\n\nPlay is the highest form of research\n\n\n-- \nProbably not Albert Einstein\n\n\n\n\nThe goal of this project is to have a real Python application with good documentation about the internal workings and the tools being used.\n\n\nFeatures of the implementation\n\n\n\n\nComplete \nrules of Mau Mau\n\n\ntwo different strategies:\n\n\nsimple random strategy for a computer player\n\n\nstrategy that adds interactivity so a human can play against the computer\n\n\n\n\n\n\nFunctions to run multiple games and collect stats\n\n\nFlexible \ncommand line interface\n (add new functions without adjusting code)\n\n\nautomatic tests\n with py.test, tox and Travis CI\n\n\nLogging with the stdlib \nlogging module\n\n\nUse of \nmagic methods (protocols)\n to create custom classes which behave like inbuilt data types",
             "title": "Home"
         },
         {
             "location": "/#mau-mau",
-            "text": "Play is the highest form of research  --  Probably not Albert Einstein",
+            "text": "Play is the highest form of research  --  Probably not Albert Einstein   The goal of this project is to have a real Python application with good documentation about the internal workings and the tools being used.",
             "title": "Mau Mau"
         },
         {
-            "location": "/#features-of-this-implementation",
+            "location": "/#features-of-the-implementation",
             "text": "Complete  rules of Mau Mau  two different strategies:  simple random strategy for a computer player  strategy that adds interactivity so a human can play against the computer    Functions to run multiple games and collect stats  Flexible  command line interface  (add new functions without adjusting code)  automatic tests  with py.test, tox and Travis CI  Logging with the stdlib  logging module  Use of  magic methods (protocols)  to create custom classes which behave like inbuilt data types",
-            "title": "Features of this implementation"
+            "title": "Features of the implementation"
         },
         {
             "location": "/guide/installation/",
