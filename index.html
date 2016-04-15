@@ -246,6 +246,7 @@
 </blockquote>
 <p>The goal of this project is to have a real Python application with good documentation about the internal workings and the tools being used.</p>
 <h1 id="features-of-the-implementation">Features of the implementation<a class="headerlink" href="#features-of-the-implementation" title="Permanent link">&para;</a></h1>
+<p>game:</p>
 <ul>
 <li>Complete <a href="guide/rules/">rules of Mau Mau</a></li>
 <li>two different strategies:<ul>
@@ -256,8 +257,15 @@
 <li>Functions to run multiple games and collect stats</li>
 <li>Flexible <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/cli.py">command line interface</a> (add new functions without adjusting code)</li>
 <li><a href="https://github.com/obestwalter/mau-mau/blob/master/tests/">automatic tests</a> with py.test, tox and Travis CI</li>
-<li>Logging with the stdlib <a href="https://docs.python.org/3/library/logging.html">logging module</a></li>
+</ul>
+<p>Infrastructure:</p>
+<ul>
 <li>Use of <a href="implementation/remarks/#magic-methods-protocols">magic methods (protocols)</a> to create custom classes which behave like inbuilt data types</li>
+<li>Installable as command line tool</li>
+<li>Automatic generation and deploy of documentation with MkDocs</li>
+<li>Quality Assurance: flake8, QuantifiedCode, py.test, doctests, Travis CI</li>
+<li>Logging with stdlib <a href="https://docs.python.org/3/library/logging.html">logging module</a></li>
+<li>Task automation: tox</li>
 </ul>
               
             </div>
@@ -306,5 +314,5 @@
 
 <!--
 MkDocs version : 0.15.3
-Build Date UTC : 2016-04-15 09:35:19.922910
+Build Date UTC : 2016-04-15 09:43:42.334608
 -->
