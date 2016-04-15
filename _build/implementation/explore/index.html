@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../_build/_build/_build/css/highlight.css" rel="stylesheet">
+  <link href="../../_build/_build/_build/css/theme.css" rel="stylesheet">
+  <link href="../../_build/_build/_build/css/theme_extra.css" rel="stylesheet">
   <link href="../../_build/_build/css/highlight.css" rel="stylesheet">
   <link href="../../_build/_build/css/theme.css" rel="stylesheet">
   <link href="../../_build/_build/css/theme_extra.css" rel="stylesheet">
@@ -38,6 +41,15 @@
   <script src="../../js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../../js/highlight.pack.js"></script>
   <script src="../../js/theme.js"></script> 
+  <script src="../../_build/_build/_build/js/highlight.pack.js"></script>
+  <script src="../../_build/_build/_build/js/jquery-2.1.1.min.js"></script>
+  <script src="../../_build/_build/_build/js/modernizr-2.8.3.min.js"></script>
+  <script src="../../_build/_build/_build/js/theme.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/lunr-0.5.7.min.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/mustache.min.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/require.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/search.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/text.js"></script>
   <script src="../../_build/_build/js/highlight.pack.js"></script>
   <script src="../../_build/_build/js/jquery-2.1.1.min.js"></script>
   <script src="../../_build/_build/js/modernizr-2.8.3.min.js"></script>
@@ -261,7 +273,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="setuppy-make-installable"><a href="https://github.com/obestwalter/mau-mau/blob/master/setup.py">setup.py</a>: make installable<a class="headerlink" href="#setuppy-make-installable" title="Permanent link">¶</a></h1>
+                <h1 id="setuppy-make-installable"><a class="toclink" href="#setuppy-make-installable"><a href="https://github.com/obestwalter/mau-mau/blob/master/setup.py">setup.py</a>: make installable</a><a class="headerlink" href="#setuppy-make-installable" title="Permanent link">&para;</a></h1>
 <p>The code of the actual software lives in<a href="https://github.com/obestwalter/mau-mau/tree/master/mau_mau/">mau_mau/</a></p>
 <p><strong>NOTE:</strong> Please replace <code>&lt;/path/to/your/clone&gt;</code> with the actual path on your computer.</p>
 <p>To develop or explore the code it is best if you install the <a href="https://pip.pypa.io/en/stable/reference/pip_install/#editable-installs">package as editable</a> into a virtualenv. This way all the paths are working correct for all use cases (e.g. running the tests) and the command line access <code>mau-mau</code> is also installed.</p>
@@ -269,7 +281,7 @@
 <pre><code>    $ cd &lt;/path/to/your/clone&gt;
     $ pip install --editable '.[all]'
 </code></pre>
-<h1 id="playpy-the-story"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/play.py">play.py</a>: the 'story'<a class="headerlink" href="#playpy-the-story" title="Permanent link">¶</a></h1>
+<h1 id="playpy-the-story"><a class="toclink" href="#playpy-the-story"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/play.py">play.py</a>: the 'story'</a><a class="headerlink" href="#playpy-the-story" title="Permanent link">&para;</a></h1>
 <p>The overall plot of the Mau Mau story can be found here. It is written in an <a href="https://en.wikipedia.org/wiki/Imperative_programming">imperative</a> way (like a series of commands given to the computer). The code looks like a series of instructions which are to be carried out in a top down order, descending into the functions being called. The order can be influenced by loops (<code>for ... in</code> or <code>while</code>) and conditioned branches (<code>if ... then ... else</code>). These are the basic control flow constructs Python has. There are a few more, but not many.</p>
 <p><strong>Behold! The whole program in 6 lines!</strong></p>
 <pre><code class="python">def play_game(rulesOfTheGame, players):
@@ -281,20 +293,20 @@
 </code></pre>
 
 <p>This is the meat of the simulation. Here is where all the magic happens. if you call this function a game of Mau Mau will be simulated and a winner is determined. <strong>6 lines of code</strong> including the function header and the return statement. You now have read the whole plot of the fascinating Mau Mau story. If you want to understand more, you can start digging deeper and visit the definitions of the <a href="https://docs.python.org/3/glossary.html#term-function">functions</a> and <a href="https://docs.python.org/3/tutorial/classes.html">classes</a> used in the <code>play_game</code> function. Just start to explore the code and how the objects interact in whatever non-linear way you might prefer. This gives you an idea of how a simulation of a simple turn based card game can be implemented as a program.</p>
-<h1 id="conceptspy-abstract-stuff"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/concepts.py">concepts.py</a>: abstract stuff<a class="headerlink" href="#conceptspy-abstract-stuff" title="Permanent link">¶</a></h1>
+<h1 id="conceptspy-abstract-stuff"><a class="toclink" href="#conceptspy-abstract-stuff"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/concepts.py">concepts.py</a>: abstract stuff</a><a class="headerlink" href="#conceptspy-abstract-stuff" title="Permanent link">&para;</a></h1>
 <p>The general concepts used in the game as classes.</p>
-<h1 id="modules-defining-the-classes">Modules defining the classes<a class="headerlink" href="#modules-defining-the-classes" title="Permanent link">¶</a></h1>
+<h1 id="modules-defining-the-classes"><a class="toclink" href="#modules-defining-the-classes">Modules defining the classes</a><a class="headerlink" href="#modules-defining-the-classes" title="Permanent link">&para;</a></h1>
 <p>These look pretty different from <code>game.py</code> and they are. Here is where the object oriented part of the story kicks in. If <code>game.py</code> contains the plot, these modules contain the descriptions of the actors and props of the story. They describe the relevant part of the virtual universe that is created to run the simulation. It contains custom data structures (a.k.a. classes) to model the problem of simulating Mau Mau. You should be able to read through the classes and get an idea of what elements are needed to simulate a card game and how they might interact.</p>
-<h2 id="objectspy-and-subjectspy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/objects.py">objects.py</a> and <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/subjects.py">subjects.py</a><a class="headerlink" href="#objectspy-and-subjectspy" title="Permanent link">¶</a></h2>
+<h2 id="objectspy-and-subjectspy"><a class="toclink" href="#objectspy-and-subjectspy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/objects.py">objects.py</a> and <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/subjects.py">subjects.py</a></a><a class="headerlink" href="#objectspy-and-subjectspy" title="Permanent link">&para;</a></h2>
 <p>I know .. in Python everything is an object, so this would be meaningless. This is also not <a href="https://en.wikipedia.org/wiki/Subject-oriented_programming">subject oriented programming</a>. These are just good terms for what those classes describe in the context of the program: there are objects in the game which are manipulated by the subjects.</p>
-<h2 id="rulespy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/rules.py">rules.py</a><a class="headerlink" href="#rulespy" title="Permanent link">¶</a></h2>
+<h2 id="rulespy"><a class="toclink" href="#rulespy"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/rules.py">rules.py</a></a><a class="headerlink" href="#rulespy" title="Permanent link">&para;</a></h2>
 <p>This contains the classes that implement the rules of Mau Mau. Start reading with the <code>MauMau</code> class and see if you can figure out how it works. There is always one concrete rule active on the table that is valid for the currently played round. Sometimes information gets transferred from one rule to the next (e.g. if a 7 was put on a seven, the number of draws have to accumulate). </p>
-<h2 id="strategypy-how-to-play"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/strategy.py">strategy.py</a>: how to play<a class="headerlink" href="#strategypy-how-to-play" title="Permanent link">¶</a></h2>
+<h2 id="strategypy-how-to-play"><a class="toclink" href="#strategypy-how-to-play"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/strategy.py">strategy.py</a>: how to play</a><a class="headerlink" href="#strategypy-how-to-play" title="Permanent link">&para;</a></h2>
 <p><strong>Note:</strong> A player has a strategy, but the player also attaches it to the active rule, so that it can be queried for the wanted suit if a Jack is on the table.</p>
-<h3 id="basicstrategy">BasicStrategy<a class="headerlink" href="#basicstrategy" title="Permanent link">¶</a></h3>
+<h3 id="basicstrategy"><a class="toclink" href="#basicstrategy">BasicStrategy</a><a class="headerlink" href="#basicstrategy" title="Permanent link">&para;</a></h3>
 <p>Player plays according to the rules and always chooses random antidotes if they have any (e.g. 7 on 7 to prevent having to draw) or normal cards. If playing a Jack it always asks for the suit it has the most of. </p>
 <p>This can be extended upon to implement "real" strategies.</p>
-<h3 id="humanstrategy">HumanStrategy<a class="headerlink" href="#humanstrategy" title="Permanent link">¶</a></h3>
+<h3 id="humanstrategy"><a class="toclink" href="#humanstrategy">HumanStrategy</a><a class="headerlink" href="#humanstrategy" title="Permanent link">&para;</a></h3>
 <p>Mainly to show that the existing design makes it very easy to even add interactivity to let a human play against a computer (<code>mau-mau human</code>).</p>
 <p>The impact of this is very likely to be zero on a planetary basis, as this is just a teaching tool, but in general one should be very wary of implementing something just because it's easy:</p>
 <blockquote>
@@ -302,9 +314,9 @@
 <p>-- Tony Hoare</p>
 </blockquote>
 <p>... you have been warned.</p>
-<h1 id="clipy-command-line-access"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/cli.py">cli.py</a>: command line access<a class="headerlink" href="#clipy-command-line-access" title="Permanent link">¶</a></h1>
+<h1 id="clipy-command-line-access"><a class="toclink" href="#clipy-command-line-access"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/cli.py">cli.py</a>: command line access</a><a class="headerlink" href="#clipy-command-line-access" title="Permanent link">&para;</a></h1>
 <p>This contains the code for the commandline interface. Its function <code>main</code> is configured in <code>setup.py</code> to act like a program called <code>mau-mau</code> that is accessible where the package is installed. At the moment the following can be accessed from the commandline:</p>
-<h1 id="statspy-create-statistics"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/stats.py">stats.py</a>: create statistics<a class="headerlink" href="#statspy-create-statistics" title="Permanent link">¶</a></h1>
+<h1 id="statspy-create-statistics"><a class="toclink" href="#statspy-create-statistics"><a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/stats.py">stats.py</a>: create statistics</a><a class="headerlink" href="#statspy-create-statistics" title="Permanent link">&para;</a></h1>
 <p>Contains some functions to run the game simulations and collect statistics. See <a href="../../guide/usage/#collect-statistics">usage examples</a></p>
               
             </div>

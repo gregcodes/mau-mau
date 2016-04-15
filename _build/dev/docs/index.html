@@ -19,6 +19,9 @@
   <link rel="stylesheet" href="../../css/theme.css" type="text/css" />
   <link rel="stylesheet" href="../../css/theme_extra.css" type="text/css" />
   <link rel="stylesheet" href="../../css/highlight.css">
+  <link href="../../_build/_build/_build/css/highlight.css" rel="stylesheet">
+  <link href="../../_build/_build/_build/css/theme.css" rel="stylesheet">
+  <link href="../../_build/_build/_build/css/theme_extra.css" rel="stylesheet">
   <link href="../../_build/_build/css/highlight.css" rel="stylesheet">
   <link href="../../_build/_build/css/theme.css" rel="stylesheet">
   <link href="../../_build/_build/css/theme_extra.css" rel="stylesheet">
@@ -38,6 +41,15 @@
   <script src="../../js/modernizr-2.8.3.min.js"></script>
   <script type="text/javascript" src="../../js/highlight.pack.js"></script>
   <script src="../../js/theme.js"></script> 
+  <script src="../../_build/_build/_build/js/highlight.pack.js"></script>
+  <script src="../../_build/_build/_build/js/jquery-2.1.1.min.js"></script>
+  <script src="../../_build/_build/_build/js/modernizr-2.8.3.min.js"></script>
+  <script src="../../_build/_build/_build/js/theme.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/lunr-0.5.7.min.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/mustache.min.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/require.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/search.js"></script>
+  <script src="../../_build/_build/_build/mkdocs/js/text.js"></script>
   <script src="../../_build/_build/js/highlight.pack.js"></script>
   <script src="../../_build/_build/js/jquery-2.1.1.min.js"></script>
   <script src="../../_build/_build/js/modernizr-2.8.3.min.js"></script>
@@ -250,13 +262,13 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="mkdocs-and-github-pages">MkDocs and Github pages<a class="headerlink" href="#mkdocs-and-github-pages" title="Permanent link">¶</a></h1>
-<h2 id="mkdocs">MkDocs<a class="headerlink" href="#mkdocs" title="Permanent link">¶</a></h2>
+                <h1 id="mkdocs-and-github-pages"><a class="toclink" href="#mkdocs-and-github-pages">MkDocs and Github pages</a><a class="headerlink" href="#mkdocs-and-github-pages" title="Permanent link">&para;</a></h1>
+<h2 id="mkdocs"><a class="toclink" href="#mkdocs">MkDocs</a><a class="headerlink" href="#mkdocs" title="Permanent link">&para;</a></h2>
 <p>The documentation is generated with <a href="http://www.mkdocs.org/">MkDocs</a> and it lives in <a href="https://github.com/obestwalter/mau-mau/tree/master/docs/">docs/</a>. The configuration is in <a href="https://github.com/obestwalter/mau-mau/blob/master/mkdocs.yml">mkdocs.yml</a> (<a href="https://en.wikipedia.org/wiki/YAML">YAML</a> format).</p>
 <p><a href="https://en.wikipedia.org/wiki/Markdown">Markdown</a> is an easy to learn format that is the default on <a href="">Github</a>https://guides.github.com/features/mastering-markdown/ and <a href="http://stackoverflow.com/editing-help">Stack Overflow</a>. It is much easier on the eye than restructuredText - the established standard in the Python world. But it is also not as powerful. For more complex documentation <a href="http://www.sphinx-doc.org">Sphinx</a> and <a href="http://www.sphinx-doc.org/en/stable/rest.html">restructuredText</a> might be better suited.</p>
-<h2 id="github-pages">Github pages<a class="headerlink" href="#github-pages" title="Permanent link">¶</a></h2>
+<h2 id="github-pages"><a class="toclink" href="#github-pages">Github pages</a><a class="headerlink" href="#github-pages" title="Permanent link">&para;</a></h2>
 <p>Github offers to host the project documentation on <a href="https://pages.github.com/">Github Pages</a>. MkDocs has an inbuilt deploy functionality do push the documentation there. The pages are hosted as project homepage on <a href="http://obestwalter.github.io/mau-mau/">github.io</a>.</p>
-<h1 id="building-the-documentation">Building the documentation<a class="headerlink" href="#building-the-documentation" title="Permanent link">¶</a></h1>
+<h1 id="building-the-documentation"><a class="toclink" href="#building-the-documentation">Building the documentation</a><a class="headerlink" href="#building-the-documentation" title="Permanent link">&para;</a></h1>
 <p>When you work on the documentation you can start a local server:</p>
 <pre><code>$ cd &lt;path/to/your/clone&gt;
 $ tox -e docs-auto
@@ -265,7 +277,7 @@ $ tox -e docs-auto
 <p>Tidy up the build in case of big changes or problems:</p>
 <pre><code>$ tox -e docs-clean
 </code></pre>
-<h1 id="deploying-the-documentation">Deploying the documentation<a class="headerlink" href="#deploying-the-documentation" title="Permanent link">¶</a></h1>
+<h1 id="deploying-the-documentation"><a class="toclink" href="#deploying-the-documentation">Deploying the documentation</a><a class="headerlink" href="#deploying-the-documentation" title="Permanent link">&para;</a></h1>
 <p>If you have push rights for the repository you can deploy the current documentation with:</p>
 <pre><code>$ cd &lt;path/to/your/clone&gt;
 $ tox -e docs-deploy
