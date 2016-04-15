@@ -131,9 +131,6 @@
                 <li class="toctree-l3"><a href="#high-level-view">High level view</a></li>
                 
             
-                <li class="toctree-l3"><a href="#using-classes">Using classes</a></li>
-                
-            
             </ul>
         
     </li>
@@ -246,7 +243,7 @@
           <div role="main">
             <div class="section">
               
-                <h1 id="ooommm"><a class="toclink" href="#ooommm">OOOMMM</a><a class="headerlink" href="#ooommm" title="Permanent link">&para;</a></h1>
+                <h1 id="ooommm">OOOMMM<a class="headerlink" href="#ooommm" title="Permanent link">&para;</a></h1>
 <p><strong>Obvious Object Oriented Mau Mau Modelling</strong></p>
 <p>Switching into egghead mode, you could say that a game of Mau Mau can be modelled as a series of interactions between actors with adjustable attributes and behaviours modifying their own attributes and initiating reactions and attribute changes in other actors. If you call the actors objects and the behaviour methods you have a basic description of object oriented programming.</p>
 <blockquote>
@@ -258,15 +255,13 @@
 <p>Once you have said this, you have not really provided a definition, but rather posed a set of problems: What precisely is an object? How do you find and describe the objects? How should programs manipulate objects? What are the possible relations between objects? How does one explore the commonalities that may exist between various kinds of objects? How do these ideas relate to classical software engineering concerns such as correctness, ease of use, efficiency?</p>
 </blockquote>
 <p>What does that tell us? OO is just one of many ways of thinking about the problems you are trying to solve with software. Sometimes that way of thinking matches well with the problem you are trying to solve. There are also a lot of possibly very different answers to the questions posed by Meyer and they manifest in very different approaches to the implementation of OO in different programming languages.</p>
-<h1 id="high-level-view"><a class="toclink" href="#high-level-view">High level view</a><a class="headerlink" href="#high-level-view" title="Permanent link">&para;</a></h1>
+<h1 id="high-level-view">High level view<a class="headerlink" href="#high-level-view" title="Permanent link">&para;</a></h1>
 <p>One koan in the <a href="https://www.python.org/dev/peps/pep-0020/">Zen of Python</a> says: "If the implementation is easy to explain, it may be a good idea". Let's put this to the test and explain the implementation of our Mau Mau program by simply describing the conditions and rules of the game using a rough approximation of the programs' terminology and see if the objects and their interactions make the implementation look obvious. Objects used in the program are marked <code>like this</code>, functions that describe (inter)actions are marked like <strong>this</strong>). The game can also be described in two phases, we could call "setup" and "play". The image shows all the important elements of the simulation.</p>
 <p><img alt="overview" src="../../_static/overview.png" /></p>
 <p><strong>setup:</strong> The <code>players</code> are <strong>invited</strong> to a <code>game</code> at the <code>table</code>. A <code>deck</code> of <code>cards</code> is <strong>shuffled</strong>. The same amount of cards is <strong>dealt</strong> to the <code>players</code> to form their <code>hand</code>. One <code>card</code> - the <code>upcard</code> - is <strong>drawn</strong> from the <code>stock</code> and placed face up on the <code>table</code>. The remaining cards are <code>piled</code> face down on the <code>table</code> and form the <code>stock</code>. Now all is in place to <strong>play</strong> the <code>game</code>. </p>
 <p><strong>play:</strong> The <code>players</code> play in <code>turns</code>. They choose a<code>card</code> that is <strong>playable</strong> with the <code>upcard</code> according to the rules (same <code>suit</code> or same <code>value</code> and <a href="../../guide/rules/#special-rules">special rules</a> and place it on the <code>table</code>. The played <code>card</code> ist the new  <code>upcard</code> and the old <code>upcard</code> is now part of the <code>waste</code>. Now the next <code>player</code> is up. If a player can't find a <code>card</code> to play, they have to draw one from the <code>stock</code> and the next <code>player</code> is up. If the <code>stock</code> <code>is empty</code>, the <code>waste</code> <code>cards</code> will be <strong>shuffled</strong> to form the new <code>stock</code>. The game is over and the <code>winner</code> is found as soon as one <code>player</code> plays the last card of their <code>hand</code>.</p>
 <p>Easy enough to explain. This description of the rules and the gameplay can double already as a high level explanation of the implementation. It can also be read as an abstract story about a game, where the concrete story would be the description of an actual game. The program code can be viewed as story shape or abstract plot, with different executions of it as concrete stories. If you have no idea what I mean just watch <a href="https://www.youtube.com/watch?v=oP3c1h8v2ZQ">Kurt Vonneguts short talk about the shape of stories</a> and transfer your insights into thinking about abstract program code and its concrete execution :)</p>
-<h1 id="using-classes"><a class="toclink" href="#using-classes">Using classes</a><a class="headerlink" href="#using-classes" title="Permanent link">&para;</a></h1>
 <p>The modelling problem we have here is a good fit to create your own data structures (which classes are), so we will model the game flow using <a href="https://docs.python.org/3/tutorial/classes.html#classes">custom Python classes</a> that interact in the way described above.</p>
-<p>The code is aiming to be readable and to demonstrate a whole range of concepts and <a href="https://gist.github.com/JeffPaine/6213790">pythonic</a> ways to write software. It is not a toy example, but the nasty details that usually screw with our nice and simple design and make the code grow tentacles and other cruft is not (yet) part of the code, so it can still be read like a nice little completely non-linear story (hopefully). It came into live in a non-linear fashion and should also be read that way.</p>
               
             </div>
           </div>
