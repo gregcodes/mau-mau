@@ -194,8 +194,7 @@
     
         <li class="main active"><a href="#mau-mau">Mau Mau</a></li>
         
-    
-        <li class="main "><a href="#features-of-the-implementation">Features of the implementation</a></li>
+            <li><a href="#features">Features</a></li>
         
     
     </ul>
@@ -207,9 +206,10 @@
 <p>Play is the highest form of research</p>
 <p>-- <a href="http://quoteinvestigator.com/2014/08/21/play-research/">Probably not Albert Einstein</a></p>
 </blockquote>
-<p>The goal of this project is to have a real Python application with good documentation about the internal workings and the tools being used.</p>
-<h1 id="features-of-the-implementation">Features of the implementation<a class="headerlink" href="#features-of-the-implementation" title="Permanent link">&para;</a></h1>
-<p>game:</p>
+<p>This project aims to be a learning tool. Emphasis is put on <a href="https://gist.github.com/JeffPaine/6213790">pythonic</a> ways to code and on using the power of the Open Source ecosystem. This is not a toy example, but the nasty details that usually screw with the nice and simple design and make the code grow tentacles and other cruft is not (yet) part of the code, so it can still be read like a nice little completely non-linear story (hopefully). It came into live in a non-linear fashion and should also be read that way.</p>
+<p>I will try to keep it that way even if it has to grow some tentacles like fixing the broken unicode support in Windows terminals and other things the real world comes up with to complicate our beautiful simple projects.</p>
+<h2 id="features">Features<a class="headerlink" href="#features" title="Permanent link">&para;</a></h2>
+<h3 id="the-game">The game<a class="headerlink" href="#the-game" title="Permanent link">&para;</a></h3>
 <ul>
 <li>Complete <a href="guide/rules/">rules of Mau Mau</a></li>
 <li>two different strategies:<ul>
@@ -220,15 +220,15 @@
 <li>Functions to run multiple games and collect stats</li>
 <li>Installable as command line tool</li>
 </ul>
-<p>Implementation and tools:</p>
+<h3 id="implementation-and-tools">Implementation and tools<a class="headerlink" href="#implementation-and-tools" title="Permanent link">&para;</a></h3>
 <ul>
 <li><a href="https://github.com/obestwalter/mau-mau/blob/master/tests/">automatic tests</a> with py.test, tox and Travis CI</li>
-<li>Use of <a href="implementation/remarks/#magic-methods-protocols">magic methods (protocols)</a> to create custom classes which behave like inbuilt data types</li>
 <li>Flexible <a href="https://github.com/obestwalter/mau-mau/blob/master/mau_mau/cli.py">command line interface</a> (add new functions without adjusting code)</li>
-<li>Automatic generation and deployment of documentation with MkDocs</li>
+<li>Use of <a href="implementation/remarks/#magic-methods-protocols">magic methods</a> to create custom classes which behave like inbuilt data types</li>
 <li>Quality Assurance: flake8, QuantifiedCode, py.test, doctests, Travis CI</li>
+<li>Automatic generation and deployment of documentation with MkDocs</li>
 <li>Logging with stdlib <a href="https://docs.python.org/3/library/logging.html">logging module</a></li>
-<li>Task automation (like building and deploying docs): tox</li>
+<li>Developer task automation with tox (building and deploying docs, running tests)</li>
 </ul></div>
         </div>
 

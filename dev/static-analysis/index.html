@@ -192,17 +192,19 @@
             <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
     <ul class="nav bs-sidenav">
     
-        <li class="main active"><a href="#flake8">Flake8</a></li>
+        <li class="main active"><a href="#static-code-analysis">Static code analysis</a></li>
         
-    
-        <li class="main "><a href="#quantified-code">Quantified Code</a></li>
+            <li><a href="#flake8">Flake8</a></li>
+        
+            <li><a href="#quantified-code">Quantified Code</a></li>
         
     
     </ul>
 </div></div>
             <div class="col-md-9" role="main">
 
-<h1 id="flake8">Flake8<a class="headerlink" href="#flake8" title="Permanent link">&para;</a></h1>
+<h1 id="static-code-analysis">Static code analysis<a class="headerlink" href="#static-code-analysis" title="Permanent link">&para;</a></h1>
+<h2 id="flake8">Flake8<a class="headerlink" href="#flake8" title="Permanent link">&para;</a></h2>
 <p><a href="https://pypi.python.org/pypi/flake8">Flake8</a> is a collection of tools that analyze the code without running it. This can be understood as a first line of defense and you learn about style and complexity problems you might have in your code.</p>
 <p>Run flake8 analysis:</p>
 <pre><code>$ cd &lt;path/to/your/clone&gt;
@@ -216,7 +218,7 @@ mau_mau/cli.py:41:1: E302 expected 2 blank lines, found 1
 def simple_parse_args(argv):
 ^
 </code></pre>
-<h1 id="quantified-code">Quantified Code<a class="headerlink" href="#quantified-code" title="Permanent link">&para;</a></h1>
+<h2 id="quantified-code">Quantified Code<a class="headerlink" href="#quantified-code" title="Permanent link">&para;</a></h2>
 <p>Quantified Code offers static code analysis as a webservice that connects to your Github repository. It is an interesting new approach and can teach you a lot about the code you write. It is not just pointing out problems it tries to educate about the reasoning behind the warnings and even helps to fix the problems. Definitely <a href="https://www.quantifiedcode.com/app/project/663c550f107844aa842b4ce5e02883c4">worth a look</a>.</p></div>
         </div>
 

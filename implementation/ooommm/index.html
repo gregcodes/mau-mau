@@ -194,8 +194,9 @@
     
         <li class="main active"><a href="#ooommm">OOOMMM</a></li>
         
-    
-        <li class="main "><a href="#high-level-view">High level view</a></li>
+            <li><a href="#obvious-object-oriented-mau-mau-modelling">Obvious Object Oriented Mau Mau Modelling</a></li>
+        
+            <li><a href="#high-level-view">High level view</a></li>
         
     
     </ul>
@@ -203,7 +204,7 @@
             <div class="col-md-9" role="main">
 
 <h1 id="ooommm">OOOMMM<a class="headerlink" href="#ooommm" title="Permanent link">&para;</a></h1>
-<p><strong>Obvious Object Oriented Mau Mau Modelling</strong></p>
+<h2 id="obvious-object-oriented-mau-mau-modelling">Obvious Object Oriented Mau Mau Modelling<a class="headerlink" href="#obvious-object-oriented-mau-mau-modelling" title="Permanent link">&para;</a></h2>
 <p>Switching into egghead mode, you could say that a game of Mau Mau can be modelled as a series of interactions between actors with adjustable attributes and behaviours modifying their own attributes and initiating reactions and attribute changes in other actors. If you call the actors objects and the behaviour methods you have a basic description of object oriented programming.</p>
 <blockquote>
 <p>Object-oriented design is, in its simplest form, based on a seemingly elementary idea. Computing systems perform certain actions on certain objects; to obtain flexible and reusable systems, it is better to base the structure of software on the objects than on the actions. </p>
@@ -214,7 +215,7 @@
 <p>Once you have said this, you have not really provided a definition, but rather posed a set of problems: What precisely is an object? How do you find and describe the objects? How should programs manipulate objects? What are the possible relations between objects? How does one explore the commonalities that may exist between various kinds of objects? How do these ideas relate to classical software engineering concerns such as correctness, ease of use, efficiency?</p>
 </blockquote>
 <p>What does that tell us? OO is just one of many ways of thinking about the problems you are trying to solve with software. Sometimes that way of thinking matches well with the problem you are trying to solve. There are also a lot of possibly very different answers to the questions posed by Meyer and they manifest in very different approaches to the implementation of OO in different programming languages.</p>
-<h1 id="high-level-view">High level view<a class="headerlink" href="#high-level-view" title="Permanent link">&para;</a></h1>
+<h2 id="high-level-view">High level view<a class="headerlink" href="#high-level-view" title="Permanent link">&para;</a></h2>
 <p>One koan in the <a href="https://www.python.org/dev/peps/pep-0020/">Zen of Python</a> says: "If the implementation is easy to explain, it may be a good idea". Let's put this to the test and explain the implementation of our Mau Mau program by simply describing the conditions and rules of the game using a rough approximation of the programs' terminology and see if the objects and their interactions make the implementation look obvious. Objects used in the program are marked <code>like this</code>, functions that describe (inter)actions are marked like <strong>this</strong>). The game can also be described in two phases, we could call "setup" and "play". The image shows all the important elements of the simulation.</p>
 <p><img alt="overview" src="../../_static/overview.png" /></p>
 <p><strong>setup:</strong> The <code>players</code> are <strong>invited</strong> to a <code>game</code> at the <code>table</code>. A <code>deck</code> of <code>cards</code> is <strong>shuffled</strong>. The same amount of cards is <strong>dealt</strong> to the <code>players</code> to form their <code>hand</code>. One <code>card</code> - the <code>upcard</code> - is <strong>drawn</strong> from the <code>stock</code> and placed face up on the <code>table</code>. The remaining cards are <code>piled</code> face down on the <code>table</code> and form the <code>stock</code>. Now all is in place to <strong>play</strong> the <code>game</code>. </p>
