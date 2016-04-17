@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        
+        
+        <link rel="shortcut icon" href="../../img/favicon.ico">
+
+	<title>Remarks - Mau Mau</title>
+
+        <link href="../../css/bootstrap-custom.min.css" rel="stylesheet">
+        <link href="../../css/font-awesome-4.5.0.css" rel="stylesheet">
+        <link href="../../css/base.css" rel="stylesheet">
+        <link rel="stylesheet" href="../../css/highlight.css">
+        <link href="../../_build/_build/css/highlight.css" rel="stylesheet">
+        <link href="../../_build/_build/css/theme.css" rel="stylesheet">
+        <link href="../../_build/_build/css/theme_extra.css" rel="stylesheet">
+        <link href="../../_build/css/highlight.css" rel="stylesheet">
+        <link href="../../_build/css/theme.css" rel="stylesheet">
+        <link href="../../_build/css/theme_extra.css" rel="stylesheet">
+
+        <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!--[if lt IE 9]>
+            <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+            <script src="https://oss.maxcdn.com/libs/respond.js/1.3.0/respond.min.js"></script>
+        <![endif]-->
+
+        
+    </head>
+
+    <body>
+
+        <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+
+        <!-- Collapsed navigation -->
+        <div class="navbar-header">
+            
+            <!-- Expander button -->
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            
+
+            <!-- Main title -->
+            <a class="navbar-brand" href="../..">Mau Mau</a>
+        </div>
+
+        <!-- Expanded navigation -->
+        <div class="navbar-collapse collapse">
+            
+                <!-- Main navigation -->
+                <ul class="nav navbar-nav">
+                
+                
+                    <li >
+                        <a href="../..">Home</a>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">User Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../guide/installation/">Installation</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../guide/usage/">Command line access</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../guide/rules/">Rules of Mau Mau</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown active">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Implemenation <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../ooommm/">OOOMMM</a>
+</li>
+
+                        
+                            
+<li class="active">
+    <a href="./">Remarks</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../explore/">Explore the code</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Developer Guide <b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                        
+                            
+<li >
+    <a href="../../dev/getting-started/">Getting started</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../dev/static-analysis/">Static code analysis</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../dev/tests/">Automatic tests</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../dev/tox/">Using Tox</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../dev/travis-ci/">Continuous intergration</a>
+</li>
+
+                        
+                            
+<li >
+    <a href="../../dev/docs/">Working on documentation</a>
+</li>
+
+                        
+                        </ul>
+                    </li>
+                
+                
+                </ul>
+            
+
+            <ul class="nav navbar-nav navbar-right">
+                <li>
+                    <a href="#" data-toggle="modal" data-target="#mkdocs_search_modal">
+                        <i class="fa fa-search"></i> Search
+                    </a>
+                </li>
+                
+                    <li >
+                        <a rel="next" href="../ooommm/">
+                            <i class="fa fa-arrow-left"></i> Previous
+                        </a>
+                    </li>
+                    <li >
+                        <a rel="prev" href="../explore/">
+                            Next <i class="fa fa-arrow-right"></i>
+                        </a>
+                    </li>
+                
+                
+                    <li>
+                        <a href="https://github.com/obestwalter/mau-mau">
+                            
+                                <i class="fa fa-github"></i>
+                            
+                            GitHub
+                        </a>
+                    </li>
+                
+            </ul>
+        </div>
+    </div>
+</div>
+
+        <div class="container">
+            
+                <div class="col-md-3"><div class="bs-sidebar hidden-print affix well" role="complementary">
+    <ul class="nav bs-sidenav">
+    
+        <li class="main active"><a href="#argument-passing-by-assignment">Argument passing by assignment</a></li>
+        
+    
+        <li class="main "><a href="#assertions">Assertions</a></li>
+        
+    
+        <li class="main "><a href="#logging">Logging</a></li>
+        
+    
+        <li class="main "><a href="#magic-methods-protocols">Magic methods (protocols)</a></li>
+        
+            <li><a href="#object-representation-__repr__">Object representation (__repr__)</a></li>
+        
+            <li><a href="#make-your-own-objects-behave-like-built-in-data-types">Make your own objects behave like built in data types</a></li>
+        
+            <li><a href="#other-uses-of-special-object-attributes">Other uses of special object attributes</a></li>
+        
+    
+    </ul>
+</div></div>
+                <div class="col-md-9" role="main">
+
+<h1 id="argument-passing-by-assignment">Argument passing by assignment<a class="headerlink" href="#argument-passing-by-assignment" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>Remember that arguments are passed by assignment in Python. Since assignment just creates references to objects, there’s no alias between an argument name in the caller and callee, and so no call-by-reference per se.</p>
+<p>-- <a href="https://docs.python.org/3.5/faq/programming.html#how-do-i-write-a-function-with-output-parameters-call-by-reference">How do I write a function with output parameters (call by reference)?</a></p>
+</blockquote>
+<p>The way passing data to functions work in Python is <a href="https://jeffknupp.com/blog/2012/11/13/is-python-callbyvalue-or-callbyreference-neither/">quite specific</a>, so it is important, that you are aware of it and understand it. Walk through this example in the <a href="http://goo.gl/MeBNPV">tutor</a> to visualize what is really happening when you pass mutable objects into functions and e.g. append elements to a list object that was passed into a function. In the example it is a list but this holds true for any object that contains references to other objects.</p>
+<p>Changing the state of an object that is not returned explicitly is called a <a href="https://goo.gl/3n4nXW">side effect</a>. Purists of certain programming paradigms would tell you that this style is messy and error prone. I won't argue with them, because I might loose. For now that's how we do it here, because than you really understand how it works. Real world programs have lots of side effects anyway so better just get used to it :) The discussion around when and how to use side effects is a huge topic. For now I just want to make you aware, that some of our functions and methods have side effects, meaning that not all changes to the state of the program are communicated purely by returning values. BTW: raising exceptions are also considered side effects and they are used a lot in Python.</p>
+<h1 id="assertions">Assertions<a class="headerlink" href="#assertions" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p>What can be asserted without evidence can be dismissed without evidence.</p>
+<p>-- Christopher Hitchens</p>
+</blockquote>
+<p>To assert something means "to state or express positively". Assertions are regarded as important enough in Python, that <a href="https://docs.python.org/3/reference/simple_stmts.html#the-assert-statement"><code>assert</code> is a statement</a> (since Python 3 even <code>print</code> is not important enough to be a statement). <code>assert</code> evaluates an expression and raises an <a href="https://docs.python.org/3/library/exceptions.html?highlight=assert#AssertionError"><code>AssertionError</code></a> if the result of the evaluation is <code>False</code> (with a customizable message to provide more information about the problem). This can be a very simple check like making sure that an object is <a href="https://docs.python.org/3/library/stdtypes.html#truth">truthy</a> if evaluated as <a href="https://docs.python.org/3/library/functions.html#bool"><code>bool</code></a>. </p>
+<pre><code class="Python">def spam(someObject):
+    assert someObject, &quot;Hey! %s is not what I want!&quot; % (someObject)
+    print(someObject)
+
+spam([1, 2])
+spam([])
+</code></pre>
+
+<p>The assert in the <code>spam</code> function makes sure, that the argument passed evaluates to <code>True</code> before moving on. The first call is o.k. but the second raises the exception and prints the message as part of the traceback.</p>
+<p>This is a good way to make sure that your program crashes early if the preconditions are not what you expect them. Like making sure there is a chair under your bottom before you make an attempt to sit down. Used with good measure this can safe you a lot of trouble - finding the good measure for usage of the assert statement in your code is an art and not a science.</p>
+<p>Look for uses of the assert statement in the code to get an idea how it might be used.</p>
+<h1 id="logging">Logging<a class="headerlink" href="#logging" title="Permanent link">&para;</a></h1>
+<p>Python has a simple to use and convenient <a href="https://docs.python.org/3.5/library/logging.html">logging module</a> included. There is no reason why beginners shouldn't learn using that right away in their programs instead of cluttering the code with calls to <code>print</code>. One immediate advantage is the possibility to use different <a href="https://docs.python.org/3.5/library/logging.html">log levels</a> in the program and adjust the output when debugging problems (e.g. <code>logging.DEBUG</code> to see the full story while debugging and <code>logging.WARNING</code> when running thousands of simulations, where logging would slow us down).</p>
+<p>We use a <a href="https://docs.python.org/3.5/library/logging.html#logrecord-attributes">simple format</a> and the <a href="https://docs.python.org/3.5/library/logging.html#logging.basicConfig">convenience function</a> to initialize the logger to write to the terminal with a certain level.</p>
+<h1 id="magic-methods-protocols">Magic methods (protocols)<a class="headerlink" href="#magic-methods-protocols" title="Permanent link">&para;</a></h1>
+<p>Those <code>__something__()</code> thingies might look scary for the uninitiated, but you will love them, once you got the idea. These methods are a way to use the internal language mechanics of Python for your own classes. They make up an important part of the Python superpowers and it's never too early to learn about them (you should at least know that they exist and that they have special meaning). Some of them are used in the model classes to create pythonic behaviour of the objects (e.g. make them iterable and comparable) and good representations.</p>
+<h2 id="object-representation-__repr__">Object representation (<code>__repr__</code>)<a class="headerlink" href="#object-representation-__repr__" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p>If at all possible, this should look like a valid Python expression that could be used to recreate an object with the same value</p>
+<p>-- <a href="https://docs.python.org/3/reference/datamodel.html?highlight=__repr__#object.__repr__">Python docs</a></p>
+</blockquote>
+<p>In this simple simulation this is actually possible for all objects, so why not do it? This makes it possible to copy object representations from the output and recreate them in the REPL to experiment with them. If done right this works correctly when using inheritance as well (see <code>Stock</code> and <code>Waste</code>).</p>
+<p>This could also be useful: <a href="https://docs.python.org/3.5/library/reprlib.html">reprlib helps making better representations</a>.</p>
+<h2 id="make-your-own-objects-behave-like-built-in-data-types">Make your own objects behave like built in data types<a class="headerlink" href="#make-your-own-objects-behave-like-built-in-data-types" title="Permanent link">&para;</a></h2>
+<ul>
+<li>let an object have a <a href="https://docs.python.org/2/reference/datamodel.html#object.__len__">length (<code>__len__</code>)</a> and a concept of being <code>True</code> or <code>False</code> depending on having a length &gt; 0 or not.</li>
+<li>make an object <a href="https://docs.python.org/2/reference/datamodel.html#object.__iter__">iterable (<code>__iter__</code>)</a>.</li>
+</ul>
+<h2 id="other-uses-of-special-object-attributes">Other uses of special object attributes<a class="headerlink" href="#other-uses-of-special-object-attributes" title="Permanent link">&para;</a></h2>
+<p>All objects have a <a href="https://docs.python.org/2/library/stdtypes.html?highlight=__name__#class.__name__">name (<code>__name__</code>)</a></p>
+<p>The name attribute of module objects are set dynamically depending on the context in which the module is loaded. If the module is run like a script it has a different name than when it is imported by another module. The names of modules are used for two purposes in this program:</p>
+<ol>
+<li>Set the name of the logger object to get information from where the log was written</li>
+<li>If a module is started directly it has the special name <code>__main__</code> - this can be used to only execute certain code if it is meant to behave like a script (as opposed to being imported as a module). This is the <a href="https://docs.python.org/3/library/__main__.html">canonic way</a> to do this. </li>
+</ol>
+<p><strong>More resources about magic methods</strong></p>
+<ul>
+<li><a href="https://docs.python.org/3/reference/datamodel.html?highlight=__repr__#special-method-names">Python docs</a></li>
+<li><a href="http://www.rafekettler.com/magicmethods.html">A Guide to Python's Magic Methods</a></li>
+</ul></div>
+            
+        </div>
+
+        <footer class="col-md-12">
+            <hr>
+            
+            <p>Documentation built with <a href="http://www.mkdocs.org/">MkDocs</a>.</p>
+        </footer>
+
+        <script src="../../js/jquery-1.10.2.min.js"></script>
+        <script src="../../js/bootstrap-3.0.3.min.js"></script>
+        <script src="../../js/highlight.pack.js"></script>
+        <script>var base_url = '../..';</script>
+        <script data-main="../../mkdocs/js/search.js" src="../../mkdocs/js/require.js"></script>
+        <script src="../../js/base.js"></script>
+        <script src="../../_build/_build/js/highlight.pack.js"></script>
+        <script src="../../_build/_build/js/jquery-2.1.1.min.js"></script>
+        <script src="../../_build/_build/js/modernizr-2.8.3.min.js"></script>
+        <script src="../../_build/_build/js/theme.js"></script>
+        <script src="../../_build/_build/mkdocs/js/lunr-0.5.7.min.js"></script>
+        <script src="../../_build/_build/mkdocs/js/mustache.min.js"></script>
+        <script src="../../_build/_build/mkdocs/js/require.js"></script>
+        <script src="../../_build/_build/mkdocs/js/search.js"></script>
+        <script src="../../_build/_build/mkdocs/js/text.js"></script>
+        <script src="../../_build/js/highlight.pack.js"></script>
+        <script src="../../_build/js/jquery-2.1.1.min.js"></script>
+        <script src="../../_build/js/modernizr-2.8.3.min.js"></script>
+        <script src="../../_build/js/theme.js"></script>
+        <script src="../../_build/mkdocs/js/lunr-0.5.7.min.js"></script>
+        <script src="../../_build/mkdocs/js/mustache.min.js"></script>
+        <script src="../../_build/mkdocs/js/require.js"></script>
+        <script src="../../_build/mkdocs/js/search.js"></script>
+        <script src="../../_build/mkdocs/js/text.js"></script>
+
+        <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="dialog" aria-labelledby="Search Modal" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal"><span aria-hidden="true">&times;</span><span class="sr-only">Close</span></button>
+                        <h4 class="modal-title" id="exampleModalLabel">Search</h4>
+                    </div>
+                    <div class="modal-body">
+                        <p>
+                            From here you can search these documents. Enter
+                            your search terms below.
+                        </p>
+                        <form role="form">
+                            <div class="form-group">
+                                <input type="text" class="form-control" placeholder="Search..." id="mkdocs-search-query">
+                            </div>
+                        </form>
+                        <div id="mkdocs-search-results"></div>
+                    </div>
+                    <div class="modal-footer">
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </body>
+</html>
