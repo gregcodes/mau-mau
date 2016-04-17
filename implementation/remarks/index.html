@@ -194,6 +194,8 @@
     
         <li class="main active"><a href="#remarks">Remarks</a></li>
         
+            <li><a href="#code-block-separation-by-indentation">Code block separation by indentation</a></li>
+        
             <li><a href="#argument-passing-by-assignment">Argument passing by assignment</a></li>
         
             <li><a href="#assertions">Assertions</a></li>
@@ -208,6 +210,20 @@
             <div class="col-md-9" role="main">
 
 <h1 id="remarks">Remarks<a class="headerlink" href="#remarks" title="Permanent link">&para;</a></h1>
+<h2 id="code-block-separation-by-indentation">Code block separation by indentation<a class="headerlink" href="#code-block-separation-by-indentation" title="Permanent link">&para;</a></h2>
+<p>Python is a language where space matters ... meaning  units of code (blocks, function bodies, etc.) are separated by ending a line with a colon (:) and pressing <code>Enter</code> - PyCharm already guesses what you want to do then and <a href="http://www.diveintopython.net/getting_to_know_python/indenting_code.html">indents</a> the new line for you (manually you can indent with the <code>Tab</code> key (this also works if you have selected several lines)). The indented code belongs to that block. The block is closed by <a href="https://www.jetbrains.com/pycharm/webhelp/changing-indentation.html?">outdenting</a> (with <code>Shift + Tab</code>) the first line that should not be part of that block anymore - a.k.a. <a href="https://www.python.org/dev/peps/pep-0008/#code-lay-out">significant whitespace</a>.</p>
+<p>Example:</p>
+<pre><code class="python">def my_super_function():
+    print(&quot;I am indented with 4 spaces&quot;)
+    print(&quot;Me too! I belong to the function&quot;)
+print(&quot;I am not inside the function block anymore :(&quot;)
+
+for currentElement in range(5):
+    print(currentElement)
+    print(&quot;I also belong to the loop block&quot;)
+print(&quot;I don't belong to the loop block anymore&quot;)
+</code></pre>
+
 <h2 id="argument-passing-by-assignment">Argument passing by assignment<a class="headerlink" href="#argument-passing-by-assignment" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p>Remember that arguments are passed by assignment in Python. Since assignment just creates references to objects, there’s no alias between an argument name in the caller and callee, and so no call-by-reference per se.</p>
