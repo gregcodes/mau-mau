@@ -1,3 +1,5 @@
+# dies ist ein Kommentar, den ich committe!
+
 import logging
 
 from mau_mau.concepts import _CardCollection
